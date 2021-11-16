@@ -1,0 +1,19 @@
+<input type="text" id="inputYear" name="inputYear" (change)="yearChange()">Year
+<div style="display: flex;">
+    <div class="first-box" *ngFor="let date of datesList">
+        <h4 *ngIf="date.getDay() == 1">Mon</h4>
+        <h4 *ngIf="date.getDay() == 2">Tue</h4>
+        <h4 *ngIf="date.getDay() == 3">Wed</h4>
+        <h4 *ngIf="date.getDay() == 4">Thu</h4>
+        <h4 *ngIf="date.getDay() == 5">Fri</h4>
+        <h4 *ngIf="date.getDay() == 6">Sat</h4>
+        <h4 *ngIf="date.getDay() == 0">Sun</h4>
+        <hr>
+        <h4>{{date.getDate()}}</h4>
+    </div>
+</div>
+<div>
+    <button (click)="next()">next</button>
+    <button (click)="prev()">prev</button>
+
+</div>
